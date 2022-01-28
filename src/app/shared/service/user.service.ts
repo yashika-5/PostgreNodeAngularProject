@@ -12,7 +12,16 @@ export class UserService {
    apiPrefix : string = "http://localhost:3300";
   constructor(private http: HttpClient, private router: Router) { }
 
-  getUser(){
-  return  this.http.get<User[]>(this.apiPrefix + '/users');
+  getUsers(){
+    return  this.http.get<User[]>(this.apiPrefix + '/users');
+  }
+  addUser(body:User){
+    return  this.http.post<User[]>(this.apiPrefix + '/users',body);
+  }
+  updateUser(id:number,body:User){
+    return  this.http.put<User[]>(this.apiPrefix + `/users/${id}`,body);
+  }
+  getLocalUser() {
+    return this.users;
   }
 }

@@ -1,5 +1,5 @@
 <section class="new-user" fxLayoutAlign="center">
-    <form>
+    <form (ngSubmit)="addUser(f)" #f="ngForm">
         <mat-card fxFlex.xs="100%" fxFlex="500px">
             <mat-card-title fxLayoutAlign="center" fxLayoutGap="30px">
                 Time to add the users!
@@ -7,25 +7,27 @@
             <mat-card-content fxLayoutAlign="center" fxLayout="column">
                 <table class="example-full-width" cellspacing="0">
                     <tr>
-                    <td><mat-form-field class="example-full-width" appearance="fill">
+                    <td><mat-form-field  class="example-full-width" appearance="fill">
                       <mat-label>First name</mat-label>
-                      <input matInput required>
+                      <input name="firstName" matInput ngModel required>
                     </mat-form-field></td>
                     <td><mat-form-field class="example-full-width" appearance="fill">
                       <mat-label>Last Name</mat-label>
-                      <input matInput required>
+                      <input name="lastName" matInput ngModel required>
                     </mat-form-field></td>
                   </tr>
                 </table>
                   
                   <mat-form-field >
-                    <input
+                    <input 
                       matInput
-                      type="text"
-                      name="title"
+                      ngModel
+                      type="email"
+                      name="email"
                       required
                       minlength="3"
                       placeholder="Email.."
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
                       appearance="fill"
                      >
                     <!-- <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error> -->
@@ -33,8 +35,9 @@
                   <mat-form-field >
                     <input
                       matInput
-                      type="text"
-                      name="title"
+                      ngModel
+                      type="number"
+                      name="mobile"
                       required
                       minlength="3"
                       placeholder="Mobile.."
@@ -45,8 +48,9 @@
                   <mat-form-field >
                     <input
                       matInput
+                      ngModel
                       type="text"
-                      name="title"
+                      name="location"
                       required
                       minlength="3"
                       placeholder="Location.."
