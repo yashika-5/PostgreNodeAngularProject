@@ -1,0 +1,64 @@
+<section class="new-user" fxLayoutAlign="center">
+    <form>
+        <mat-card fxFlex.xs="100%" fxFlex="500px">
+            <mat-card-title fxLayoutAlign="center" fxLayoutGap="30px">
+                Time to add the users!
+            </mat-card-title>
+            <mat-card-content fxLayoutAlign="center" fxLayout="column">
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                    <td><mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>First name</mat-label>
+                      <input matInput required>
+                    </mat-form-field></td>
+                    <td><mat-form-field class="example-full-width" appearance="fill">
+                      <mat-label>Last Name</mat-label>
+                      <input matInput required>
+                    </mat-form-field></td>
+                  </tr>
+                </table>
+                  
+                  <mat-form-field >
+                    <input
+                      matInput
+                      type="text"
+                      name="title"
+                      required
+                      minlength="3"
+                      placeholder="Email.."
+                      appearance="fill"
+                     >
+                    <!-- <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error> -->
+                  </mat-form-field>
+                  <mat-form-field >
+                    <input
+                      matInput
+                      type="text"
+                      name="title"
+                      required
+                      minlength="3"
+                      placeholder="Mobile.."
+                      appearance="fill"
+                     >
+                    <!-- <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error> -->
+                  </mat-form-field>
+                  <mat-form-field >
+                    <input
+                      matInput
+                      type="text"
+                      name="title"
+                      required
+                      minlength="3"
+                      placeholder="Location.."
+                      appearance="fill"
+                     >
+                    <!-- <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error> -->
+                  </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions fxLayoutAlign="center">
+                <button mat-button type="submit" >Add</button>
+            </mat-card-actions>
+        </mat-card>
+    </form>
+    
+</section>
