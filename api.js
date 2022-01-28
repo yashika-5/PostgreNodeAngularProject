@@ -42,7 +42,7 @@ app.get('/users/:id', (req, res)=>{
     client.end;
 });
 
-app.post('/users', (req, res)=> {
+app.post('/users', (req, res)=> {  
     const user = req.body;
     console.log(user)
     let insertQuery = `insert into users( "firstName", "lastName", email, mobile, location) values( '${user.firstName}', '${user.lastName}', '${user.email}', ${user.mobile}, '${user.location}')`;
